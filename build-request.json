@@ -1,0 +1,34 @@
+{
+  "kind": "build_request",
+  "title": "Publish the current project",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Deploy and publish the current state of the ZoritLegends application to the Internet Computer network, making it publicly accessible.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "publish now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The application is successfully deployed to the Internet Computer",
+        "The published app is publicly accessible via its canister URL",
+        "Both frontend and backend canisters are live and functional"
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [
+    "Making any code or design changes before publishing",
+    "Exporting or downloading project files"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

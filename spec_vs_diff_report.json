@@ -1,0 +1,31 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-28T11:47:32.330Z",
+  "summary": "The diff shows only modifications to backend/main.mo (code changes) and project_state.json (tracking file). There is no evidence of actual deployment to the Internet Computer network. The feature request AR-1 in project_state.json has status 'pending', indicating deployment has not occurred. No deployment configuration, canister IDs, dfx.json updates, or deployment scripts are present in the diff.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Deploy and publish the current state of the ZoritLegends application to the Internet Computer network, making it publicly accessible.",
+      "reason": "The diff contains no evidence of actual deployment. The project_state.json marks AR-1 (mapped to REQ-1) as 'pending'. No canister IDs, deployment logs, updated dfx.json with canister URLs, or any deployment artifacts are present. Both frontend and backend canisters being live and functional cannot be confirmed.",
+      "evidence": [
+        "project_state.json",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Code changes to backend/main.mo introducing a user registration and login system with password hashing",
+      "reason": "The build request explicitly states 'Making any code or design changes before publishing' is a non-goal. The diff modifies backend/main.mo with new register/login functionality, which constitutes a code change not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.92,
+  "changed_files": [
+    "backend/main.mo",
+    "project_state.json"
+  ]
+}
